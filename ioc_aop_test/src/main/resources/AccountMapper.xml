@@ -1,0 +1,14 @@
+<mapper namespace="org.arch_learn.ioc_aop_test.mapper.AccountMapper">
+
+    <select id="queryAccountByCardNo" resultType="org.arch_learn.ioc_aop_test.po.Account" parameterType="org.arch_learn.ioc_aop_test.po.Account">
+        select * from account where card_no = #{card_no}
+    </select>
+
+
+    <update id="updateAccountByCardNo" parameterType="org.arch_learn.ioc_aop_test.po.Account">
+        update account set
+        name = #{name},
+        money = #{money}
+        where card_no = #{card_no}
+    </update>
+</mapper>
